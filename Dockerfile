@@ -3,8 +3,7 @@ FROM caddy:2-builder AS builder
 RUN xcaddy build \
     --with github.com/hslatman/caddy-crowdsec-bouncer/http@main \
     --with github.com/hslatman/caddy-crowdsec-bouncer/appsec@main \
-    --with github.com/caddy-dns/netcup \
-    --with pkg.jsn.cam/caddy-defender
+    --with github.com/caddy-dns/netcup
 
 FROM caddy:2
 
